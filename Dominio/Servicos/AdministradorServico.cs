@@ -2,6 +2,9 @@ using System.Data.Common;
 using MinimalApi.Dominio.Entidades;
 using MinimalApi.DTOs;
 using MinimalApi.Infraestrutura.Db;
+using MinimalApi.Dominio.Interfaces;
+
+
 
 namespace MinimalApi.Dominio.Servicos;
 
@@ -22,6 +25,3 @@ public class AdministradorServico : IAdministradorServico
 
 }
 
-public interface IAdministradorServico
-{
-}
