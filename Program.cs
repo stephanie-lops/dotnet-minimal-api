@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using MinimalApi.Dominio.Servicos;
 
-// Video "Configurando modelo de veiculos"
+// Video "Confifgurando Swagger na aplicacao"
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,4 +31,3 @@ app.MapPost("/login", ([FromBody] LoginDTO loginDTO, AdministradorServico admini
 });
 
 app.Run();
-
