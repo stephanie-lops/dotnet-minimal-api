@@ -4,11 +4,16 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using MinimalApi.Dominio.Servicos;
 
+
 // Video "Confifgurando Swagger na aplicacao"
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<AdministradorServico, AdministradorServico>();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 
 builder.Services.AddDbContext<DbContexto>(options =>
 {
@@ -29,5 +34,8 @@ app.MapPost("/login", ([FromBody] LoginDTO loginDTO, AdministradorServico admini
     else
         return Results.Unauthorized();   
 });
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.Run();
