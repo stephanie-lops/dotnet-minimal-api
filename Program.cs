@@ -3,9 +3,10 @@ using MinimalApi.DTOs;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using MinimalApi.Dominio.Servicos;
+using MinimalApi.Dominio.ModelViews;
 
 
-// Video "Confifgurando Swagger na aplicacao"
+// Video "POST para criar veiculo" 
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,7 +26,7 @@ builder.Services.AddDbContext<DbContexto>(options =>
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello Minimal API!");
+app.MapGet("/", () => Results.Json(new Home()));
 
 app.MapPost("/login", ([FromBody] LoginDTO loginDTO, AdministradorServico administradorServico) => {
     if(administradorServico.Login(loginDTO) != null)
