@@ -8,7 +8,7 @@ using MinimalApi.Dominio.Interfaces;
 using System.IO.Pipes;
 using MinimalApi.Dominio.Entidades;
 
-// Video "POST para criar veiculo" 
+// Video "PUT" 
 
 #region Buider
 var builder = WebApplication.CreateBuilder(args);
@@ -32,7 +32,7 @@ var app = builder.Build();
 #endregion
 
 #region Home
-app.MapGet("/", () => Results.Json(new Home()));
+app.MapGet("/", () => Results.Json(new Home())).WithTags("Home");
 #endregion
 
 #region Administradores
@@ -42,7 +42,7 @@ app.MapPost("/administradores/login", ([FromBody] LoginDTO loginDTO, IAdministra
     
     else
         return Results.Unauthorized();   
-});
+}).WithTags("Administradores");
 #endregion
 
 #region Veiculos
@@ -56,14 +56,14 @@ app.MapPost("/veiculos", ([FromBody] VeiculoDTO veiculoDTO, IVeiculoServico veic
     veiculoServico.Incluir(veiculo);
 
     return Results.Created($"/veiculos/{veiculo.Id}", veiculo);
-});
+}).WithTags("Veiculos");
 
 app.MapGet("/veiculos", ([FromQuery] int? pagina, IVeiculoServico veiculoServico) => {
     
     var veiculos = veiculoServico.Todos(pagina);
 
     return Results.Ok(veiculos);
-});
+}).WithTags("Veiculos");
 #endregion
 
 #region App
