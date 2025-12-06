@@ -1,7 +1,7 @@
 # dotnet-minimal-api
 Este projeto apresenta uma Minimal API construída com .NET 8, com o objetivo de demonstrar a criação de endpoints REST de forma simples e organizada. O projeto utiliza Entity Framework Core com SQLite para persistência e inclui documentação automática via Swagger.
 
-# Funcionalidades
+## Funcionalidades
 - API construída utilizando .NET 8 Minimal APIs
 - CRUD completo para gerenciamento de itens
 - Persistência de dados com Entity Framework Core
@@ -9,7 +9,7 @@ Este projeto apresenta uma Minimal API construída com .NET 8, com o objetivo de
 - Documentação com Swagger / OpenAPI
 - Estrutura simples, limpa e facilmente extensível
 
-# Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - .NET 8
 - C# 12
 - Minimal API
@@ -17,12 +17,12 @@ Este projeto apresenta uma Minimal API construída com .NET 8, com o objetivo de
 - SQLite
 - Swagger / Swashbuckle
 
-# Pré-requisitos
+## Pré-requisitos
 Para executar o projeto, é necessário ter instalado:
 - .NET SDK 8 ou superior
 - (Opcional) Visual Studio Code com a extensão C#
 
-# Como Executar
+## Como Executar
 
 Clonar o repositório:
 ```
@@ -52,7 +52,7 @@ Swagger disponível em:
 ```
 https://localhost:5001/swagger
 ```
-# Endpoints
+## Endpoints
 - GET /items
 Retorna todos os itens cadastrados.
 - GET /items/{id}
