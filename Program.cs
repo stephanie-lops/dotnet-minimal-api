@@ -8,11 +8,25 @@ using MinimalApi.Dominio.Interfaces;
 using System.IO.Pipes;
 using MinimalApi.Dominio.Entidades;
 using MinimalApi.Dominio.Enuns;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
-// Video "Configuranco token JWT no projeto" 
+// Video "Configuranco token JWT no projeto" - 30
+// 13
+// 7
+// 4
+// 6
+// 19
+// 34
+// 24
 
 #region Buider
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAuthentication(option => 
+{
+    option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+});
 
 builder.Services.AddScoped<IAdministradorServico, AdministradorServico>();
 builder.Services.AddScoped<IVeiculoServico, VeiculoServico>();
@@ -24,8 +38,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DbContexto>(options =>
 {
     options.UseMySql(
-        builder.Configuration.GetConnectionString("mysql"),
-        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("mysql"))
+        builder.Configuration.GetConnectionString("MySql"),
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("MySql"))
     );
 });
 
