@@ -15,12 +15,12 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
 // Video "Configurando o swagger com JWT" -13'
-// 7'
-// 4'
-// 6'
-// 19'
-// 34'
-// 24'
+// Video "Criando autenticaçãp" -7'
+// Video "Refatorando"- 4'
+// Video "Teste de unidade"- 6'
+// Video "Teste de persistencia"- 19'
+// Video "Teste de request"- 34'
+// Video "Deploy"- 24'
 
 #region Buider
 var builder = WebApplication.CreateBuilder(args);
