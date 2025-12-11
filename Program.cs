@@ -16,7 +16,6 @@ using System.Security.Claims;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http;
 
-// Video "Configurando o swagger com JWT" -13'
 // Video "Criando autenticaçãp" -7'
 // Video "Refatorando"- 4'
 // Video "Teste de unidade"- 6'
