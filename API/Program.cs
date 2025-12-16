@@ -17,7 +17,6 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http;
 using Microsoft.AspNetCore.Authorization;
 
-// Video "Criando autenticaçãp" -7'
 // Video "Refatorando"- 4'
 // Video "Teste de unidade"- 6'
 // Video "Teste de persistencia"- 19'
