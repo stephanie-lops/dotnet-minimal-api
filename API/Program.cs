@@ -14,11 +14,8 @@ using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http;
 using Microsoft.AspNetCore.Authorization;
 
-// Video "Refatorando"- 4'
-// Video "Teste de unidade"- 6'
 // Video "Teste de persistencia"- 19'
 // Video "Teste de request"- 34'
 // Video "Deploy"- 24'
