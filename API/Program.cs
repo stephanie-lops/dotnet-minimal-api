@@ -16,7 +16,6 @@ using System.Security.Claims;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authorization;
 
-// Video "Teste de persistencia"- 7:04
 // Video "Teste de request"- 34'
 // Video "Deploy"- 24'
 
